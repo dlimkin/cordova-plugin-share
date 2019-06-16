@@ -5,9 +5,14 @@
         version="0.1.1">
     <name>Share</name>
     <description>Share</description>
+        <repo>https://github.com/dlimkin/cordova-plugin-share</repo>
     <license>Apache 2.0</license>
     <keywords>share,facebook,twitter</keywords>
     
+   <engines>
+      <engine name="cordova" version=">=3.0.0" />
+   </engines>
+        
     <js-module src="www/share.js" name="Share">
         <clobbers target="window.navigator.share" />
     </js-module>
@@ -19,17 +24,7 @@
                 <param name="android-package" value="nl.madebymark.share.Share"/>
             </feature>
         </config-file>
+            
         <source-file src="src/android/Share.java" target-dir="src/nl/madebymark/share" />
-     </platform>
-
-     <!-- ios -->
-     <platform name="ios">    
-         <config-file target="config.xml" parent="/*">
-             <feature name="Share">
-                 <param name="ios-package" value="MMShare" /> 
-             </feature>
-         </config-file>
-         <header-file src="src/ios/MMShare.h" />
-         <source-file src="src/ios/MMShare.m" />
      </platform>
 </plugin>
