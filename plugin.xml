@@ -14,7 +14,7 @@
    </engines>
         
     <js-module src="www/share.js" name="Share">
-        <clobbers target="window.navigator.share" />
+        <clobbers target="cordova.plugins.share" />
     </js-module>
     
     <!-- android -->
